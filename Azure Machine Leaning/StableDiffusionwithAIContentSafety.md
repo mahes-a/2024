@@ -32,7 +32,7 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
   
 - Safe Image Responses are sent back to UI via the Azure Machine learning real-time inference endpoints
 
-##### Deploying stabilityai-stable-diffusion-2-1 model with Azure AI Content Safety
+## Deploying stabilityai-stable-diffusion-2-1 model with Azure AI Content Safety
 
 - Login into your ML Studio [here](https://ml.azure.com/)
 
@@ -59,3 +59,17 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
 
 
 * To avoid costs , If you aren't going use the real time deployment, Please delete the endpoint by following the article [here](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-online-endpoints?view=azureml-api-2&tabs=azure-cli#delete-the-endpoint-and-the-deployment)*
+
+## Validating Safe generation with Azure AI Content Safety
+
+- Test the Rel-time end-points with and un-safe prompts
+  
+- Unsafe prompts are blocked by blocked by the Azure AI Content Safety (AACS) service.
+  
+- From the Aure Portal open the deployed  Azure AI Content Safety (AACS) service resource and using the Monitor online activity validate the content filtering for unsafe prompts
+
+  ![image](https://github.com/mahes-a/2024/assets/120069348/e1e2b68d-6ec2-4210-9062-fa07c2cb183e)
+
+     
+
+
