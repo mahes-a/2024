@@ -44,7 +44,7 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
   
 - Execute the cells in the notebook by entering the required details like the Subscription ID , Resource group names
   
-- Once notebook execution completes open up the endpoints->Real-time-endpoints-> The stable diffusion endpoint
+- Once notebook execution completes the stabilityai-stable-diffusion-2-1 model with Azure AI Content Safety resource is deployed  open up the endpoints->Real-time-endpoints-> The stable diffusion endpoint
 
   ![image](https://github.com/mahes-a/2024/assets/120069348/73ebc904-0cdb-4805-acea-85a12afc2629)
 
