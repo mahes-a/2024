@@ -19,3 +19,16 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
 
 - Azure subscription with Azure Machine Learning resource
 - Deploying stable-diffusion-2-1 requires GPU compute of V100 / A100 SKUs. You can view and request AzureML compute quota [here](https://ml.azure.com/quota).
+
+  ## Technical Flow
+
+- Gradio UI depoyed as a Azure web app via App Service , Gradio UI sends user inputs to  Azure Machine learning real-time inference endpoints
+  
+- Azure Machine learning real-time inference endpoints hosts the stable-diffusion-2-1 model with Azure AI Content Safety monitoring
+  
+- The User prompts are monitored , validated and filtered by  Azure AI Content Safety resource
+  
+- Safe Prompts are sent to stable-diffusion-2-1 model and response from  model is also monitored and validated by the Azure AI Content Safety resource
+  
+- Safe Image Responses are sent back to UI via the Azure Machine learning real-time inference endpoints
+
