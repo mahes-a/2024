@@ -162,3 +162,5 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
           
           iface = gr.Interface(fn=call_api, inputs=["text", "number", "number"], outputs='image', allow_flagging='never')
           iface.launch()
+
+- To Deploy the Gradio App to a Azure App Service refer [here](https://datasciencedojo.com/blog/web_app_for_gradio/)
