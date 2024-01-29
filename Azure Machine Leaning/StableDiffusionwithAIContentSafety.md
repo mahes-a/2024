@@ -72,4 +72,93 @@ DesignBuddy is a Gradio UI application that uses Stability AI's Stable Diffusion
 
      
 
+## Deploying the sample Gradio web UI
 
+- We use Gradio UI to execute the stabilityai-stable-diffusion-2-1 AML endpoint
+  
+- stabilityai-stable-diffusion-2-1 AML endpoint returns image content in base64 format.
+  
+- We can Decode the base64 string and render as PIL Image , The entire sample code as below
+
+          #pip install gradio
+          import gradio as gr
+          import numpy as np
+          from PIL import Image
+          import io
+          import base64
+          import requests
+          import json
+          import urllib.request
+          import os
+          import ssl
+          
+          def allowSelfSignedHttps(allowed):
+              # bypass the server certificate verification on client side
+              if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
+                  ssl._create_default_https_context = ssl._create_unverified_context
+          
+          allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
+          def call_api(user_input, height, width):
+              # Build the JSON payload
+              #user_input='tennis in space'
+              #height=512
+              #width  =512
+              data = {
+                  "input_data": {
+                      "columns": ["prompt"],
+                      "data": [user_input],
+                      "parameters": {
+                          "height": height,
+                          "width": width
+                      }
+                  }
+              }
+              print(data)
+              
+              body = str.encode(json.dumps(data))
+              
+              url = '' #Rest endpoint
+              # Replace this with the primary/secondary key or AMLToken for the endpoint
+              api_key = ''
+              
+              # The azureml-model-deployment header will force the request to go to a specific deployment.
+              # Remove this header to have the request observe the endpoint traffic rules
+              headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key), 'azureml-model-deployment': 'text-to-image-deploy' }
+          
+              req = urllib.request.Request(url, body, headers)
+              base64_string=''
+              try:
+                  response = urllib.request.urlopen(req)
+                  # Parse the JSON string into a Python list  
+                  data = json.loads(response.read()) 
+                  #print(data)
+            
+                  # Access the 'generated_image' field of the first item in the list  
+                  if data and 'generated_image' in data[0]:  
+                      base64_string = data[0]['generated_image']
+                  #return base64_string
+                  #base64_string = response.read()
+                  
+              except urllib.error.HTTPError as error:
+                  print("The request failed with status code: " + str(error.code))
+                  # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
+                  print(error.info())
+                  print(error.read().decode("utf8", 'ignore'))
+          
+              
+              if not base64_string:
+                      base64_string= '' #add the base64 string of image to be rendered when content safety blocks the reponses
+          
+                  # Remove 'data:image/png;base64,' if present, as PIL doesn't need it
+              if base64_string.startswith('data:image/png;base64,'):
+                      base64_string = base64_string.replace('data:image/png;base64,', '')
+          
+                  # Decode the base64 string
+              image_data = base64.b64decode(base64_string)
+                  # Convert the image data to a PIL Image
+              image = Image.open(io.BytesIO(image_data))
+                  # Convert the PIL Image to a numpy array and return it
+              return np.array(image)
+          
+          iface = gr.Interface(fn=call_api, inputs=["text", "number", "number"], outputs='image', allow_flagging='never')
+          iface.launch()
