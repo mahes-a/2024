@@ -1,6 +1,6 @@
-# DesignBuddy: An Image Generation Web App Powered by Stability AI stable-diffusion, Hosted on Azure with AI Content Safety #
+# ArtisticAssistant: An Image Generation Web App Powered by Stability AI stable-diffusion, Hosted on Azure with AI Content Safety #
 
-DesignBuddy is a Gradio UI application that uses  stabilityai-stable-diffusion-2-1 Model to generate images from text inputs. Hosted on Azure, it ensures reliable performance and scalability. It integrates with Azure AI Content Safety, preventing the generation of inappropriate content. DesignBuddy is a user-friendly tool for anyone looking to leverage AI in their creative process.
+ArtisticAssistant is a Gradio UI application that uses  stabilityai-stable-diffusion-2-1 Model to generate images from text inputs. Hosted on Azure, it ensures reliable performance and scalability. It integrates with Azure AI Content Safety, preventing the generation of inappropriate content. ArtisticAssistant is a user-friendly tool for anyone looking to leverage AI in their creative process.
 
 ## High-level Architecture
 
