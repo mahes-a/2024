@@ -4,7 +4,8 @@ ArtisticAssistant is a Gradio UI application that uses  stabilityai-stable-diffu
 
 ## High-level Architecture
 
-<img width="631" alt="image" src="https://github.com/mahes-a/2024/assets/120069348/f0e8671b-89f2-4bf4-bece-e95d29dba550">
+<img width="642" alt="image" src="https://github.com/mahes-a/2024/assets/120069348/5aebdaa2-83d4-4e01-be84-366aeab6b5e9">
+
 
 ## UI Screen Grabs
 
