@@ -1,18 +1,20 @@
 
 # Setup and Usage of Azure OpenAI GPT-4o
 
-This guide provides step-by-step instructions to set up autogen magnetic one. Please read the caution and notes before beginning the setup from autogen repo https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one
+This guide provides step-by-step instructions to set up autogen magnetic one.
+ ### Please read the caution and notes before beginning the setup from [autogen repo ](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one)
 
 ## Prerequisites
 
 - Visual Studio Code on Windows
-- Access to the repository at `autogen/python/packages/autogen-magentic-one` on the `main` branch
+- Azure subscription with access enabled for the Azure OpenAI service with GPT-4o model deployed
+- [Docker](https://docs.docker.com/engine/install/)
 
 ## Steps
 
 ### Step 1
 
-Follow the instructions in the repository to complete Step 1.
+Follow the instructions in the repo setup steps [here](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#setup-and-usage) to complete Step 1.
 
 ### Step 2: Configure Environment Variables
 
