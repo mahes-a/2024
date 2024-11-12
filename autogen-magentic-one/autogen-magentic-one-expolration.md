@@ -1,8 +1,8 @@
 
 # Setup and Usage of Azure OpenAI GPT-4o
 
-This guide provides step-by-step instructions to set up autogen magnetic one.
- # Please read the caution and notes before beginning the setup from [autogen repo ](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one)
+This guide provides step-by-step instructions to set up [autogen Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one).
+ ###  **⚠️ Warning:** Please read the caution and notes from [autogen repo](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#magentic-one) before starting the setup
 
 ## Prerequisites
 
