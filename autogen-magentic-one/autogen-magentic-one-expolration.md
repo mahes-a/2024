@@ -1,5 +1,5 @@
 
-# Setup and Usage of Azure OpenAI GPT-4o
+# Setup and Usage of autogen Magentic-One
 
 This guide provides step-by-step instructions to set up [autogen Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one).
  ###  **⚠️ Warning:** Please read the caution and notes from [autogen repo](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#magentic-one) before starting the setup
@@ -68,12 +68,18 @@ python examples/example.py --logs_dir ./my_logs --save_screenshots
 
 ### Additional Notes
 
-- **User Confirmation**: Whenever a code execution may happen, user confirmation is required.
+- **User Confirmation**: Whenever a code execution may happen, user confirmation is needed.
+  <img width="351" alt="image" src="https://github.com/user-attachments/assets/f85fce2d-6468-4244-9d75-caf989a033db">
+
 - **Content Safety**: Azure OpenAI Content Safety may detect some executions and block them as jailbreak attempts.
+   ![image](https://github.com/user-attachments/assets/2c453c5d-8518-46dc-a85f-843ffe3061e4)
+
 - **Monitoring**: Monitor the Docker containers.
 
-The `log.jsonl` file and screenshots of the browser saved under the log folder provide adequate logging and enable monitoring.
+- The `log.jsonl` file and screenshots of the browser saved under the log folder provide adequate logging and enable monitoring.
+  <img width="189" alt="image" src="https://github.com/user-attachments/assets/bd2b4d89-1ae3-4df9-8c8c-e37da32a7e5e">
+
 
 ## Conclusion
 
-Follow these steps to set up and use the Azure OpenAI GPT-4o model effectively. Ensure to monitor the logs and screenshots for any issues.
+Follow these steps to set up and use the autogen Magentic-One effectively. Ensure to monitor the logs and screenshots for any issues.
