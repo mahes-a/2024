@@ -77,12 +77,13 @@ After Agent executes final answer is printed
 
 ### Additional Notes
 
-- **User Confirmation**: Whenever a code execution may happen, user confirmation is needed.
-  <img width="273" alt="image" src="https://github.com/user-attachments/assets/f27885a4-78fb-44a4-830c-ac0d233e90f7">
+ - **User Confirmation**: Whenever a code execution may happen, user confirmation is needed.
 
+<img width="273" alt="image" src="https://github.com/user-attachments/assets/f27885a4-78fb-44a4-830c-ac0d233e90f7">
 
 - **Content Safety**: Azure OpenAI Content Safety may detect some executions and block them as jailbreak attempts.
-   ![image](https://github.com/user-attachments/assets/2c453c5d-8518-46dc-a85f-843ffe3061e4)
+
+![image](https://github.com/user-attachments/assets/2c453c5d-8518-46dc-a85f-843ffe3061e4)
 
 - **Monitoring**: Monitor the Docker containers.
 
