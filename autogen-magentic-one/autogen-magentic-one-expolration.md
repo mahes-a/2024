@@ -2,7 +2,7 @@
 # Setup and Usage of Azure OpenAI GPT-4o
 
 This guide provides step-by-step instructions to set up autogen magnetic one.
- ### Please read the caution and notes before beginning the setup from [autogen repo ](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one)
+ # Please read the caution and notes before beginning the setup from [autogen repo ](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one)
 
 ## Prerequisites
 
@@ -14,11 +14,13 @@ This guide provides step-by-step instructions to set up autogen magnetic one.
 
 ### Step 1
 
-Follow the instructions in the repo setup steps [here](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#setup-and-usage) to complete Step 1.
+Follow the instructions in the repo setup steps [here](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#setup-and-usage) to complete Step 1
+![image](https://github.com/user-attachments/assets/f587c308-a0d8-4a89-a0cc-ad0107388b54)
+
 
 ### Step 2: Configure Environment Variables
 
-1. Create a `.env` file in the `python` folder.
+1. One approach for setting environment variables is to Create a `.env` file in the `python` folder.
 2. Add the required variables, including the Azure OpenAI endpoint and model name.
 
 ```env
@@ -35,13 +37,17 @@ CHAT_COMPLETION_KWARGS_JSON='{
   "model": "gpt-4o" # your gpt-4o model name
 }'
 ```
-
+3. Add below code in autogen\python\packages\autogen-magentic-one\examples\example.py
+    ```
+      from dotenv import load_dotenv
+      load_dotenv()
+    ```
 ### Step 3: Azure OpenAI with AAD Authentication
 
 Follow the steps listed below to use Azure OpenAI client with Azure Active Directory (AAD) authentication:
 
-- Azure OpenAI with AAD Auth — AutoGen
-- How to configure Azure OpenAI Service with Microsoft Entra ID authentication - Azure OpenAI | Microsoft Learn
+- [Azure OpenAI with AAD Auth — AutoGen](https://microsoft.github.io/autogen/dev/user-guide/core-user-guide/cookbook/azure-openai-with-aad-auth.html)
+- [How to configure Azure OpenAI Service with Microsoft Entra ID authentication - Azure OpenAI | Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/managed-identity#chat-completions)
 
 ### Step 4: Install AutoGen
 
@@ -53,7 +59,7 @@ pip install autogen
 
 ### Example Code
 
-The following code creates a directory `my_logs` to store logs and saves every screenshot of the websurfer agent:
+The following code creates a directory `my_logs` in autogen\python\packages\autogen-magentic-one\my_logs to store logs and saves every screenshot of the websurfer agent:
 
 ```bash
 # Save screenshots of browser
