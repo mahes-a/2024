@@ -27,7 +27,7 @@ Follow the instructions in the repo setup steps [here](https://github.com/micros
 CHAT_COMPLETION_PROVIDER='azure'
 CHAT_COMPLETION_KWARGS_JSON='{
   "api_version": "2024-02-15-preview",
-  "azure_endpoint": "https://YourAzureopenAI.openai.azure.com/",
+  "azure_endpoint": "https://YourAzureopenAI.openai.azure.com/" # your Azure Open AI endpoint,
   "model_capabilities": {
     "function_calling": true,
     "json_output": true,
