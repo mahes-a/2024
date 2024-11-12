@@ -4,6 +4,8 @@
 This guide provides step-by-step instructions to set up [autogen Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one).
  ###  **⚠️ Warning:** Please read the caution and notes from [autogen repo](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one#magentic-one) before starting the setup
 
+ <img width="779" alt="image" src="https://github.com/user-attachments/assets/fb83e341-456f-4133-81f5-378cfdc0cba3">
+
 ## Prerequisites
 
 - Visual Studio Code on Windows
@@ -57,7 +59,7 @@ Before executing the example code, you may need to install `autogen`:
 pip install autogen
 ```
 
-### Example Code
+### Example Execution
 
 The following code creates a directory `my_logs` in autogen\python\packages\autogen-magentic-one\my_logs to store logs and saves every screenshot of the websurfer agent:
 
@@ -65,11 +67,19 @@ The following code creates a directory `my_logs` in autogen\python\packages\auto
 # Save screenshots of browser
 python examples/example.py --logs_dir ./my_logs --save_screenshots
 ```
+Once prompted enter the input prompt
+
+ ![image](https://github.com/user-attachments/assets/105fe414-69cd-41ec-b4af-6ab787faedbc)
+
+After Agent executes final answer is printed 
+
+<img width="514" alt="image" src="https://github.com/user-attachments/assets/cfb8499a-c295-4eaf-bb03-e65ad1b6e1c2">
 
 ### Additional Notes
 
 - **User Confirmation**: Whenever a code execution may happen, user confirmation is needed.
-  <img width="351" alt="image" src="https://github.com/user-attachments/assets/f85fce2d-6468-4244-9d75-caf989a033db">
+  <img width="273" alt="image" src="https://github.com/user-attachments/assets/f27885a4-78fb-44a4-830c-ac0d233e90f7">
+
 
 - **Content Safety**: Azure OpenAI Content Safety may detect some executions and block them as jailbreak attempts.
    ![image](https://github.com/user-attachments/assets/2c453c5d-8518-46dc-a85f-843ffe3061e4)
@@ -77,6 +87,7 @@ python examples/example.py --logs_dir ./my_logs --save_screenshots
 - **Monitoring**: Monitor the Docker containers.
 
 - The `log.jsonl` file and screenshots of the browser saved under the log folder provide adequate logging and enable monitoring.
+
   <img width="189" alt="image" src="https://github.com/user-attachments/assets/bd2b4d89-1ae3-4df9-8c8c-e37da32a7e5e">
 
 
